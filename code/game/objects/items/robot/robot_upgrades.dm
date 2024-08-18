@@ -359,6 +359,22 @@
 	module_type = /obj/item/robot_module/engineering
 	items_to_add = list(/obj/item/storage/part_replacer)
 
+/*************/
+// Attempt to add power drill upgrade to engi borg
+/*************/
+
+/obj/item/borg/upgrade/handdrill
+	name = "Hand Drill"
+	desc = "Hand Drill to replace screwdriver and wrench"
+	icon_state = "cyborg_upgrade5"
+	origin_tech = "engineering=4;materials=5;powerstorage=4"
+	require_module = TRUE
+	module_type = /obj/item/robot_module/engineering
+	items_to_replace = list(
+		/obj/item/wrench = null,
+		/obj/item/screwdriver = /obj/item/screwdriver/power,
+	)
+
 /***********************/
 // MARK: Janitor
 /***********************/
